@@ -17,6 +17,9 @@ gem 'coffee-rails', '~> 4.1.0'
 # Added Devise
 gem 'devise'
 
+# Authentication with Pundit
+gem 'pundit'
+
 gem 'bootstrap-sass', '~> 3.3.3'
 
 gem 'acts_as_votable', '~> 0.10.0'
