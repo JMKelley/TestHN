@@ -17,6 +17,16 @@ gem 'coffee-rails', '~> 4.1.0'
 # Added Devise
 gem 'devise'
 
+# Omniauth
+gem 'omniauth'
+gem 'omniauth-twitter'
+gem 'omniauth-facebook'
+gem 'omniauth-instagram'
+gem 'twitter'
+gem 'instagram'
+gem 'omniauth-google-oauth2'
+gem 'google-api-client', require: 'google/api_client'
+
 # Authentication with Pundit
 gem 'pundit'
 

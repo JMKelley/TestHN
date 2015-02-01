@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :users
+  devise_for :users, class_name: 'FormUser', :controllers => { omniauth_callbacks: 'users/omniauth_callbacks', registrations: 'registrations'}
   resources :links do
     member do
       put "like", to: "links#upvote"
