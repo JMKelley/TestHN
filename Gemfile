@@ -17,6 +17,9 @@ gem 'coffee-rails', '~> 4.1.0'
 # Added Devise
 gem 'devise'
 
+# Merit
+gem 'merit'
+
 # Omniauth
 gem 'omniauth'
 gem 'omniauth-twitter'
