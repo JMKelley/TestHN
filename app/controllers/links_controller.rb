@@ -6,7 +6,15 @@ class LinksController < ApplicationController
   # GET /links
   # GET /links.json
   def index
-    @links = Link.all
+    @days = [0, 1, 2, 3, 4, 5, 6, 7].collect do |i|
+      date = Time.now - i.days
+      [date, Link.where(created_at: date.beginning_of_day..date.end_of_day)]
+    end
+
+    @days = @days.unshift({}).reduce do |memo, day|
+      memo[day[0]] = day[1] if day[1].count > 0
+      memo
+    end
   end
 
   # GET /links/1

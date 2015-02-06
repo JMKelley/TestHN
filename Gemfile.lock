@@ -96,6 +96,8 @@ GEM
       multi_json (~> 1.10)
       retriable (~> 1.4)
       signet (~> 0.6)
+    groupdate (2.4.0)
+      activesupport (>= 3)
     hashie (3.3.2)
     hike (1.2.3)
     http (0.6.3)
@@ -165,6 +167,7 @@ GEM
       multi_json (~> 1.3)
       omniauth-oauth (~> 1.0)
     orm_adapter (0.5.0)
+    pg (0.18.1)
     pundit (0.3.0)
       activesupport (>= 3.0.0)
     rack (1.6.0)
@@ -228,7 +231,6 @@ GEM
       actionpack (>= 3.0)
       activesupport (>= 3.0)
       sprockets (>= 2.8, < 4.0)
-    sqlite3 (1.3.10)
     thor (0.19.1)
     thread_safe (0.3.4)
     tilt (1.4.1)
@@ -268,6 +270,7 @@ DEPENDENCIES
   coffee-rails (~> 4.1.0)
   devise
   google-api-client
+  groupdate
   instagram
   jbuilder (~> 2.0)
   jquery-rails
@@ -277,12 +280,12 @@ DEPENDENCIES
   omniauth-google-oauth2
   omniauth-instagram
   omniauth-twitter
+  pg
   pundit
   rails (= 4.2.0)
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
   spring
-  sqlite3
   turbolinks
   twitter
   uglifier (>= 1.3.0)
