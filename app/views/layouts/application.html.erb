@@ -12,7 +12,7 @@
 
 	<ul>
 		<li><%= current_user.email %></li>
-		<li><%= current_user.identities.first.nickname %></li>
+		<li><%= current_user.username %></li>
 		<li><img src="<%= current_user.identities.first.image %>"/></li>
 
 		<li><%= link_to 'Submit Link', new_link_path %></li>
