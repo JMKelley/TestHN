@@ -1,31 +1,23 @@
 class Link < ActiveRecord::Base
 	acts_as_votable
 	belongs_to :user
-	before_save :update_weighted_score
+	before_save :update_score
 
-	# Raw scores are = upvotes - downvotes
-  def raw_score
-    self.get_upvotes.size - self.get_downvotes.size
+  mount_uploader :image, ImageUploader
+
+  def score
+    ::Score.new(get_likes.count, get_dislikes.count, self.created_at || Time.now).value
   end
 
-  def weighted_score(*args)
-    order = Math.log([raw_score.abs, 1].max, 10)
-    sign = if raw_score > 0
-      1
-    elsif raw_score < 0
-      -1
-    else
-      0
-    end
-    seconds = self.created_at.to_i - (Time.now - 1.year).to_i
-    ((order + sign * seconds / 45000) * 7).ceil / 7.0
+  def is_owner?(user)
+    self.user.id == user.id
   end
 
   private
 
-  def update_weighted_score
+  def update_score
   	if cached_votes_total_changed?
-  		self.weighted_score = weighted_score
+  		self.score = score
   	end
   end
 

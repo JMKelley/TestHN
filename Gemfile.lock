@@ -59,6 +59,11 @@ GEM
       columnize (~> 0.8)
       debugger-linecache (~> 1.2)
       slop (~> 3.6)
+    carrierwave (0.10.0)
+      activemodel (>= 3.2.0)
+      activesupport (>= 3.2.0)
+      json (>= 1.7)
+      mime-types (>= 1.16)
     coffee-rails (4.1.0)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0, < 5.0)
@@ -96,8 +101,6 @@ GEM
       multi_json (~> 1.10)
       retriable (~> 1.4)
       signet (~> 0.6)
-    groupdate (2.4.0)
-      activesupport (>= 3)
     hashie (3.3.2)
     hike (1.2.3)
     http (0.6.3)
@@ -203,6 +206,7 @@ GEM
     responders (2.0.2)
       railties (>= 4.2.0.alpha, < 5)
     retriable (1.4.1)
+    rmagick (2.13.4)
     sass (3.4.10)
     sass-rails (5.0.1)
       railties (>= 4.0.0, < 5.0)
@@ -267,10 +271,10 @@ DEPENDENCIES
   acts_as_votable (~> 0.10.0)
   bootstrap-sass (~> 3.3.3)
   byebug
+  carrierwave
   coffee-rails (~> 4.1.0)
   devise
   google-api-client
-  groupdate
   instagram
   jbuilder (~> 2.0)
   jquery-rails
@@ -283,6 +287,7 @@ DEPENDENCIES
   pg
   pundit
   rails (= 4.2.0)
+  rmagick
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
   spring

@@ -22,8 +22,9 @@ gem 'devise'
 # Merit
 gem 'merit'
 
-# Group Date
-gem 'groupdate'
+# Carrierwave
+gem 'carrierwave'
+gem "rmagick"
 
 # Omniauth
 gem 'omniauth'

@@ -8,7 +8,7 @@ class LinksController < ApplicationController
   def index
     @days = [0, 1, 2, 3, 4, 5, 6, 7].collect do |i|
       date = Time.now - i.days
-      [date, Link.where(created_at: date.beginning_of_day..date.end_of_day)]
+      [date, Link.where(created_at: date.beginning_of_day..date.end_of_day).order(:score)]
     end
 
     @days = @days.unshift({}).reduce do |memo, day|
@@ -77,13 +77,13 @@ class LinksController < ApplicationController
 
   def upvote
     @link = Link.find(params[:id])
-    @link.upvote_by current_user
+    @link.upvote_by current_user unless @link.is_owner? current_user
     redirect_to :back
   end
 
   def downvote
     @link = Link.find(params[:id])
-    @link.downvote_by current_user
+    @link.downvote_by current_user unless @link.is_owner? current_user
     redirect_to :back
   end
 
@@ -99,6 +99,6 @@ class LinksController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def link_params
-      params.require(:link).permit(:title, :url)
+      params.require(:link).permit(:title, :url, :image)
     end
 end
