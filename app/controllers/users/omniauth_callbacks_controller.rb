@@ -20,7 +20,7 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
     @user = @identity.user || current_user
     if @user.nil?
-      @user = User.create( email: @identity.email || "", username: @identity.nickname || "" )
+      @user = User.create( email: @identity.email || "", username: @identity.nickname || "", avatar: @identity.image )
       @identity.update_attribute( :user_id, @user.id )
     end
 

@@ -14,6 +14,7 @@
 		<li><%= current_user.email %></li>
 		<%= current_user.points %>
 		<li><%= current_user.username %></li>
+		<li><img src="<%= current_user.avatar %>"/></li>
 
 		<li><%= link_to 'Submit Link', new_link_path %></li>
 		<li><%= link_to 'Account', edit_user_registration_path %></li>
