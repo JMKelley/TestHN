@@ -14,7 +14,7 @@
   <tbody>
     <% @days.each do |time, day| %>
       <%= time.strftime('%A') %>
-      <% day.each do |link| %>
+      <% day.order(:weighted_score).each do |link| %>
         <tr>
           <td><%= link.title %></td>
           <td><%= link.url %></td>
