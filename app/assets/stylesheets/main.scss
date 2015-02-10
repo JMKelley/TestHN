@@ -24,24 +24,31 @@ body {
 
 .navbar-nav > li > a {
 	padding: 25px 20px;
-	font-size:13px;
+	font-size:14px;
 	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-	color:#aaa;
-	font-weight: bold;
+	color:#999999;
+	font-weight: 500;
 }
+
+.navbar-default .navbar-nav > li > a
+{
+	color:#8D8D8D;
+}
+
 
 .navbar-brand {
 	float: left;
-	padding: 24px 20px;
-	font-size: 13px;
+	padding: 23px 20px;
+	font-size: 14px;
 	line-height: 20px;
 	height: 70px;
-	font-weight: bold;
+	font-weight: 500;
 }
 
 .submit-special a
 {
 	color:#22A5F4 !important;
+	font-weight: bold !important;
 }
 
 .submit-special a:hover
