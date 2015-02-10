@@ -1,0 +1,73 @@
+@import "bootstrap";
+
+html {
+	-webkit-font-smoothing: antialiased;
+}
+
+body { 
+	text-rendering: optimizeLegibility;
+}
+
+.container-fluid
+{
+	padding-left: 30px;
+	padding-right: 30px;
+}
+
+.navbar
+{
+	background:#fff;
+}
+
+
+.navbar-nav > li > a {
+	padding: 25px 20px;
+	font-size:13px;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	color:#aaa;
+	font-weight: bold;
+}
+
+.navbar-brand {
+	float: left;
+	padding: 20px 20px;
+	font-size: 13px;
+	line-height: 30px;
+	height: 70px;
+	font-weight: bold;
+}
+
+.nav-button-custom a
+{
+	padding:10px !important;
+}
+
+.nav-button-custom a .btn
+{
+	padding:8px 14px;
+}
+
+.nav-avatar-custom
+{
+	padding:20px 0px !important;
+}
+
+.nav-button-custom .btn
+{
+	font-weight:600;
+	border:none;
+	border-radius: 0px;
+	font-size: 13px;
+}
+
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus
+{
+	background:transparent;
+}
+
+
+.avatar
+{
+	height:30px;
+	width:30px;
+}
