@@ -17,6 +17,7 @@
       <% day.each do |link| %>
         <tr>
           <td><%= link.title %></td>
+          <td><%= link.user.username %></td>
           <td><img src="<%= link.image %>"/></td>
           <td><%= link.url %></td>
           <td><%= link_to 'Show', link %></td>
