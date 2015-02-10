@@ -10,7 +10,7 @@ class Link < ActiveRecord::Base
   end
 
   def is_owner?(user)
-    self.user.id == user.id
+    self.user_id == user_id
   end
 
   private
