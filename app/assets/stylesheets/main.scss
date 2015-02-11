@@ -8,10 +8,41 @@ body {
 	text-rendering: optimizeLegibility;
 }
 
+h1
+{
+	font-size: 22px;
+	color: #5B5B5B;
+	line-height: 27px;
+	padding:30px 20px;
+	font-weight: 400;
+	margin:0px;
+}
+
+h2
+{
+	font-size: 26px;
+	color: #5B5B5B;
+	line-height: 27px;
+	padding:30px 20px;
+	font-weight: 400;
+	margin:0px;
+}
+
+p
+{
+	color:#A4A4A4;
+}
+
 .container-fluid
 {
 	padding-left: 30px;
 	padding-right: 30px;
+}
+
+.main-content
+{
+	padding-left: 14px;
+	padding-right: 14px;
 }
 
 .navbar
@@ -58,7 +89,6 @@ body {
 }
 
 
-
 .nav-button-custom a
 {
 	padding:10px !important;
@@ -93,3 +123,47 @@ body {
 	height:30px;
 	width:30px;
 }
+
+.alert
+{
+	padding:0px;
+	margin:0px;
+	border:none;
+}
+
+.notice, #notice
+{
+	padding:0px;
+	margin:0px;
+}
+
+.google
+{
+	background:#000 !important;
+}
+
+.facebook
+{
+	background:#EEE;
+}
+
+/* START OF WIDGET / LINK STYLES */
+
+.item
+{
+	display:relative;
+	cursor: -webkit-zoom-in; cursor: -moz-zoom-in;
+}
+
+.item:hover img
+{
+	opacity:0.5;
+}
+
+
+
+
+
+
+
+
