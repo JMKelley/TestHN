@@ -7,7 +7,15 @@
       <h1><%= time.strftime('%A') %></h1>
       <% day.each do |link| %>
       <div class="item">
+
+          <div class="hover-info">
+            <div class="hover-avatar">
+              <%= link.user.avatar %>
+            </div>
+          </div>
+
           <img src="<%= link.image %>"/>
+          
       <% if link.is_owner? current_user %>
 
       <% else %>

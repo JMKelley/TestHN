@@ -151,13 +151,29 @@ p
 
 .item
 {
-	display:relative;
+	position:relative;
 	cursor: -webkit-zoom-in; cursor: -moz-zoom-in;
+	z-index:1;
 }
 
 .item:hover img
 {
 	opacity:0.5;
+}
+
+.hover-info
+{
+	position: absolute;
+	opacity:0;
+	right:0;
+	top:0;
+	background:#000;
+	z-index:999;
+}
+
+.item:hover .hover-info
+{
+	opacity:1;
 }
 
 
