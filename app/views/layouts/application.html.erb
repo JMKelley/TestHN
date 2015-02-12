@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Testhn</title>
+  <title>Pinatta - Find Smashing Products.</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -37,18 +37,17 @@
       <% if user_signed_in? %>
 
       <ul class="nav navbar-nav navbar-right">
-
+      <li class="submit-special"><%= link_to 'Submit Product', new_link_path %></li>
       <li>
-        <a class="nav-avatar-custom" href="#">
-          <div class="avatar">
-            <img class="img-responsive" src="<%= current_user.avatar %>"/>
-          </div>
-        </a>
+
       </li>
 
        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-          <%= current_user.username %> (<%= current_user.points %>) <span class="caret"></span></a>
+          <a class="nav-avatar-custom dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false">
+            <div class="avatar">
+              <img class="img-responsive" src="<%= current_user.avatar %>"/>
+            </div>
+          </a>
           <ul class="dropdown-menu" role="menu">
             <li><%= link_to 'Account', edit_user_registration_path %></li>
             <li><%= link_to 'Sign Out', destroy_user_session_path, :method => :delete %></li>
@@ -59,9 +58,23 @@
       <% else %>
 
       <ul class="nav navbar-nav navbar-right">
-        <li class="submit-special"><%= link_to 'Submit Product', new_link_path %></li>
+        <li class="submit-special">
+          <%= link_to new_link_path, "data-toggle" => "modal", 'data-target' => '.bs-example-modal-sm' do %>
+            Submit Product
+          <% end %>
+        </li>
         <li><%= link_to('Login', new_user_session_path)  %> </li>
       </ul>
+
+      <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+            <%= link_to user_omniauth_authorize_path(:facebook) do%>
+              Hello
+            <% end %>
+          </div>
+        </div>
+      </div>
 
       <% end %>
 

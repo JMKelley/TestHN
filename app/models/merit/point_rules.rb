@@ -14,7 +14,6 @@ module Merit
 
     def initialize
       #
-        score 10, :on => 'links#upvote', to: :user
       #
       # score 20, :on => [
       #   'comments#create',
