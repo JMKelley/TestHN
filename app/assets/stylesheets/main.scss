@@ -16,6 +16,7 @@ h1
 	padding:30px 20px;
 	font-weight: 400;
 	margin:0px;
+	float:left;
 }
 
 h2
@@ -33,6 +34,12 @@ p
 	color:#A4A4A4;
 }
 
+.product-count
+{
+	float:left;
+	padding-top:35px;
+}
+
 .container-fluid
 {
 	padding-left: 30px;
@@ -48,8 +55,10 @@ p
 .navbar
 {
 	background:#fff;
-	box-shadow: 0px 1px 0px 0px #F2F2F2;
-	border:none;
+	border-bottom: 1px solid #f1f1f1;
+	border-top:none;
+	border-left:none;
+	border-right:none;
 }
 
 
@@ -64,7 +73,7 @@ p
 
 .navbar-default .navbar-nav > li > a
 {
-	color:#8D8D8D;
+	color:#858585;
 }
 
 
@@ -108,8 +117,10 @@ p
 {
 	font-weight:600;
 	border:none;
-	border-radius: 0px;
-	font-size: 13px;
+	border-radius: 3px;
+	font-size: 14px;
+	margin-top: 7px;
+	margin-bottom:7px;
 }
 
 .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus
@@ -156,19 +167,29 @@ p
 	z-index:1;
 }
 
-.item:hover img
+
+.item:hover .link-image
 {
-	opacity:0.5;
+	opacity:0.1;
 }
 
 .hover-info
 {
-	position: absolute;
 	opacity:0;
-	right:0;
-	top:0;
-	background:#000;
 	z-index:999;
+	height:50px;
+	margin: auto;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	text-align: center;
+}
+
+.hover-info a
+{
+	text-decoration: none;
 }
 
 .item:hover .hover-info
@@ -176,6 +197,73 @@ p
 	opacity:1;
 }
 
+
+.item .hover-avatar
+{
+	width:50px;
+	height:50px;
+	display: inline-block;
+	margin-left:-4px;
+}
+
+.item .hover-score
+{
+	width:50px;
+	height:50px;
+	background:#22A5F4;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.item .hover-score .hover-actual-score
+{
+	padding: 14px 0px;
+	color: #fff;
+	text-align: center;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.item .hover-score .hover-plus-score
+{
+	display:none;
+	padding: 1px;
+	color: #fff;
+	font-size: 30px;
+	font-weight: bold;
+}
+
+.item .hover-score:hover .hover-actual-score
+{
+	display:none;
+}
+
+.item .hover-score:hover .hover-plus-score
+{
+	display:block;
+}
+
+.item .hover-basket
+{
+	width:50px;
+	height:50px;
+	background:#222222;
+	display: inline-block;
+	margin-left:-4px;
+	vertical-align: top;
+}
+
+.item .hover-basket:hover
+{
+	background:#000;
+}
+
+.item .hover-basket .hover-cart
+{
+	font-size:17px;
+	color:#fff;
+	padding:12px 12px 12px 10px;
+}
 
 
 
