@@ -8,7 +8,7 @@ body {
 	text-rendering: optimizeLegibility;
 }
 
-h1
+.main-content h1
 {
 	font-size: 21px;
 	color: #5B5B5B;
@@ -279,7 +279,81 @@ p
 
 
 
+/* MODAL CHANGES */
 
+.modal-dialog {
+	margin: 70px auto;
+}
 
+.modal-sm h1
+{
+	font-size: 26px;
+	color: #5B5B5B;
+	line-height: 27px;
+	padding:36px 20px 10px 20px;
+	font-weight: 400;
+	margin:0px;
+}
+
+.modal-sm p
+{
+	padding:10px 60px;
+}
+
+.modal-sm {
+	width: 600px;
+}
+
+.sign-in-button
+{
+	margin:auto;
+	padding:15px 32px;
+	margin-top:15px;
+	margin-bottom:35px;
+	line-height: 24px;
+	font-size: 14px;
+	font-weight: bold;
+	color:#fff;
+	border:none;
+}
+
+.sign-in-button:hover
+{
+	color:#fff;
+}
+
+.sign-in-button .fa-2x 
+{
+	font-size: 1.8em;
+	float:left;
+	padding-right: 14px;
+}
+
+.sign-in-with-twitter
+{
+	background-color:#4099FF;
+	border:none;
+	margin-right:15px;
+}
+
+.sign-in-with-twitter:hover
+{
+	background-color: #1175E7;
+}
+
+.sign-in-with-facebook
+{
+	background-color: #3D62B3;
+}
+
+.sign-in-with-facebook:hover
+{
+	background-color: #335795;
+}
+
+.sign-in-with-instagram
+{
+	
+}
 
 
