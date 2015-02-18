@@ -6,6 +6,10 @@ html {
 
 body { 
 	text-rendering: optimizeLegibility;
+	font-family: 'Helvetica Neue', Helvetica, Arial, 'Liberation Sans', FreeSans, sans-serif;
+	font-stretch: normal;
+	font-style: normal;
+	font-variant: normal;
 }
 
 .main-content h1
@@ -75,11 +79,10 @@ p
 
 
 .navbar-nav > li > a {
-	padding: 25px 20px;
+	padding: 22px 24px;
 	font-size:14px;
-	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	color:#999999;
-	font-weight: 500;
+	font-weight: 900;
 	letter-spacing:0.01em;
 }
 
@@ -91,10 +94,10 @@ p
 
 .navbar-brand {
 	float: left;
-	padding: 23px 20px;
+	padding: 20px 20px;
 	font-size: 14px;
 	line-height: 20px;
-	height: 70px;
+	height: 63px;
 	font-weight: 500;
 }
 
@@ -297,7 +300,8 @@ p
 
 .modal-sm p
 {
-	padding:10px 60px;
+	padding:20px 65px;
+	font-size: 15px;
 }
 
 .modal-sm {
