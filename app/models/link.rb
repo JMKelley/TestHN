@@ -1,9 +1,17 @@
 class Link < ActiveRecord::Base
-	acts_as_votable
+  acts_as_votable
 	belongs_to :user
 	before_save :update_score
 
   mount_uploader :image, ImageUploader
+
+  def to_param
+    "#{id}-#{slug}"
+  end
+
+  def slug
+    title.downcase.gsub(/\ +/, '-')
+  end
 
   def score
     ::Score.new(get_likes.count, get_dislikes.count, self.created_at || Time.now).value
