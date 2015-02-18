@@ -26,6 +26,8 @@ gem 'merit'
 gem 'carrierwave'
 gem "rmagick"
 
+gem 'bootstrap_form'
+
 # Omniauth
 gem 'omniauth'
 gem 'omniauth-twitter'
