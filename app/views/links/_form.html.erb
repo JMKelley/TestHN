@@ -12,13 +12,13 @@
   <% end %>
 
   <div class="field">
-    <%= f.text_field :title %>
+    <%= f.text_field :title, :required => true, :pattern => '[^@]+@[^@]+\.[a-zA-Z]{2,6}' %>
   </div>
 
-  <%= f.file_field :image %>
+  <%= f.file_field :image, :required => true %>
 
   <div class="field">
-    <%= f.text_field :url %>
+    <%= f.text_field :url, :required => true %>
   </div>
   <div class="actions">
     <%= f.submit %>
