@@ -6,6 +6,9 @@ class LinksController < ApplicationController
   # GET /links
   # GET /links.json
   def index
+
+    @links = Link.all.order(:score)
+
     @days = [0, 1, 2, 3, 4, 5, 6, 7].collect do |i|
       date = Time.now - i.days
       [date, Link.where(created_at: date.beginning_of_day..date.end_of_day).order(:score)]

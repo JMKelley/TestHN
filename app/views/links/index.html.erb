@@ -1,15 +1,19 @@
 <p id="notice"><%= notice %></p>
 
 <div class="container-fluid main-content">
+<% if user_signed_in? %>
+<% else %>
+  <div class="row">
+    <div class="col-md-7 text-left header">
+      <h1>Pinatta is a community that allows anyone </br>post their favourite products all in one place.</h1>
+      <p>* Even products for the bae.</p>
+    </div>
+  </div>
+<% end %>
+  <div class="grid">
+    <% @links.each do |link| %>
+    
 
-    <% @days.each do |time, day| %>
-    <div class="grid">
-      <div class="row">
-        <div class="col-md-12">
-          <h1><%= time.strftime('%A') %></h1><p class="product-count"><%= day.count %> Products</p>
-        </div>
-      </div>
-      <% day.each do |link| %>
       <div class="item">
 
           <div class="hover-info">
@@ -53,23 +57,21 @@
               </div>
           </div>
       <% end %>
-      </div>
+      
 
-      <% end %>
       </div> 
     <% end %>
 
+  </div>
 </div>
 <br>
 
 
 <script>
-  $(".grid").each(function() {
-    $(this).gridalicious({
+    $('.grid').gridalicious({
       width: 260,
       animate: true,
       gutter: 20
     });
-  });
 
 </script>

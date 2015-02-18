@@ -29,18 +29,20 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li><a href="#">Mens</span></a></li>
-        <li><a href="#">Womens</a></li>
+        <li><a href="#">Explore</span></a></li>
+        <li><a href="#">Random</a></li>
         <li><a href="#">Search</a></li>
       </ul>
 
       <% if user_signed_in? %>
 
       <ul class="nav navbar-nav navbar-right">
-      <li class="submit-special"><%= link_to 'Submit Product', new_link_path %></li>
-      <li>
 
-      </li>
+        <li class="submit-special">
+          <%= link_to new_link_path do %>
+            <button type="button" class="btn btn-primary">Submit</button>
+          <% end %>
+        </li>
 
        <li class="dropdown">
           <a class="nav-avatar-custom dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false">
@@ -60,7 +62,7 @@
       <ul class="nav navbar-nav navbar-right">
         <li class="submit-special">
           <%= link_to new_link_path, "data-toggle" => "modal", 'data-target' => '.bs-example-modal-sm' do %>
-            Submit Product
+            <button type="button" class="btn btn-primary">Submit</button>
           <% end %>
         </li>
         <li><%= link_to('Login', new_user_session_path)  %> </li>
