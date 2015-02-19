@@ -39,6 +39,7 @@ class LinksController < ApplicationController
   # POST /links
   # POST /links.json
   def create
+
     @link = current_user.links.build(link_params)
 
     respond_to do |format|
@@ -50,6 +51,7 @@ class LinksController < ApplicationController
         format.json { render json: @link.errors, status: :unprocessable_entity }
       end
     end
+    
   end
 
   # PATCH/PUT /links/1
