@@ -441,10 +441,10 @@ p
         float: left;
         margin: 0px;
         padding: 0px;
-        width: 100%;
+        max-width: 500px;
         height: 500px; }
       .thumb .items .images img {
-        width: auto;
+        width: 300px;
         height: 500px; }
   .thumb .controls {
     top: 0px;
