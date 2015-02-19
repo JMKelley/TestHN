@@ -3,8 +3,6 @@ class Link < ActiveRecord::Base
 	belongs_to :user
 	before_save :update_score
 
-  mount_uploader :image, ImageUploader
-
   def to_param
     "#{id}-#{slug}"
   end

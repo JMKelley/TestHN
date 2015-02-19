@@ -40,7 +40,13 @@ class LinksController < ApplicationController
   # POST /links.json
   def create
 
-    @link = current_user.links.build(link_params)
+    params = link_creation_params
+
+    @link = current_user.links.build({
+      title: params[:title],
+      image: URI.unescape(params[:thumbnail_url]),
+      url: URI.unescape(params[:url])
+    })
 
     respond_to do |format|
       if @link.save
@@ -106,4 +112,10 @@ class LinksController < ApplicationController
     def link_params
       params.require(:link).permit(:title, :url, :image)
     end
+
+    def link_creation_params
+      params.permit(:link, :title, :url, :thumbnail_url)
+    end
+
+
 end

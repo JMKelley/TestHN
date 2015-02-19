@@ -1,4 +1,5 @@
 <%= bootstrap_form_for(@link) do |f| %>
+
   <% if @link.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@link.errors.count, "error") %> prohibited this link from being saved:</h2>
@@ -11,16 +12,29 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.text_field :title, :required => true %>
-  </div>
+  <!-- EMBEDLY INTEGRATION -->
 
-  <%= f.file_field :image, :required => true %>
+      <input id="url" type="text" name="url"/>
+   
+      <!-- Placeholder that tells Preview where to put the selector-->
+      <div class="selector-wrapper"></div>
 
-  <div class="field">
-    <%= f.text_field :url, :required => true %>
-  </div>
+  <!-- END OF EMBEDLY -->
+
   <div class="actions">
     <%= f.submit %>
   </div>
+
+
+  <script>
+    // Set up preview.
+    $('#url').preview({key:'5967548e8a8647ffa7e67c42e7ff2ffa'})
+ 
+    // On submit add hidden inputs to the form.
+    $('form').on('submit', function(){
+      $(this).addInputs($('#url').data('preview'));
+      return true;
+    });
+  </script>
+
 <% end %>
