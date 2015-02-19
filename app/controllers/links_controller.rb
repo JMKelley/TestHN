@@ -43,7 +43,7 @@ class LinksController < ApplicationController
     params = link_creation_params
 
     @link = current_user.links.build({
-      title: params[:title],
+      title: URI.unescape(params[:title]),
       image: URI.unescape(params[:thumbnail_url]),
       url: URI.unescape(params[:url])
     })
