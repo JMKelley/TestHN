@@ -1,15 +1,19 @@
 <p id="notice"><%= notice %></p>
 
-<div class="container-fluid main-content">
 <% if user_signed_in? %>
 <% else %>
-  <div class="row">
-    <div class="col-md-7 text-left header">
-      <h1>Pinatta is a community that allows anyone </br>post their favourite products all in one place.</h1>
-      <p>* Even products for the bae.</p>
+  <div class="container-fluid header">
+    <div class="row">
+      <div class="col-md-12 text-left">
+        <h1>Pinatta is a community that allows anyone </br>post their favourite products all in one place.</h1>
+        <p>* Even products for the bae.</p>
+      </div>
     </div>
   </div>
 <% end %>
+
+<div class="container-fluid main-content">
+
   <div class="grid">
     <% @links.each do |link| %>
     
@@ -69,7 +73,7 @@
 
 <script>
     $('.grid').gridalicious({
-      width: 260,
+      width: 290,
       animate: true,
       gutter: 40
     });
