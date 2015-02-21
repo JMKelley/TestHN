@@ -1,19 +1,41 @@
-<div class="container-fluid new-product">
-	<div class="row">
-		<div class="col-md-10 col-md-offset-1 white-background">
+<div class="container inpost">
+		<div class="row">
+			<div class="col-md-8 inpost-background">
 
 			<div class="row">
-				<div class="col-md-6 product-image">
-						<img class="img-responsive" src="<%= @link.image %>"/>
-				</div>
-
-				<div class="col-md-6">
-					<h1><%= @link.title %></h1>
+				<div class="col-md-12 inpost-title">
+					<h2><%= @link.title %></h2>
+					<p class="source">From Net-A-Porter.com</p>
 				</div>
 			</div>
 
+				<div class="row">
+					<div class="col-md-12 image-wrapper">
+						<img class="inpost-image" src="<%= @link.image %>"/>
+					</div>
+				</div>
 
+				<div class="row">
+					<div class="col-md-12">	
+						<p>Pretend short description about a product, they nearly all have descriptions so it should be fine to have this here.</p>
+						<p>tag, tag, tag, tag, tag</p>
+					</div>
+				</div>
+
+
+			</div>
+
+
+
+			<div class="col-md-4 inpost-sidebar">
+				<div class="row">
+					<div class="col-md-4">
+						<img src="<%= @link.user.avatar %>"/>
+					</div>
+					<div class="col-md-8">
+						<h4><%= @link.user.username %></h4>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
-
-</div>

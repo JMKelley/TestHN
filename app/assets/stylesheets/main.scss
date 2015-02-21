@@ -6,7 +6,7 @@ html {
 
 body { 
 	text-rendering: optimizeLegibility;
-	font-family: 'proxima-nova','Helvetica Neue', Arial, sans-serif;
+	font-family: 'Helvetica Neue', Arial, sans-serif;
 	font-stretch: normal;
 	font-style: normal;
 	font-variant: normal;
@@ -211,13 +211,18 @@ p
 	border-radius: 0px;
 }
 
+.navbar-right
+{
+  margin-right: 0px;
+}
 
 .navbar-nav > li > a {
 	padding: 21px 20px;
 	font-weight: 600;
-	font-size: 15px;
+	font-size: 14px;
 	color: #FFF;
-	font-family: 'proxima-nova','Helvetica Neue', Arial, sans-serif;
+	font-family: 'Helvetica Neue', Arial, sans-serif;
+  letter-spacing: 0.01em;
 }
 
 .navbar-default .navbar-nav > li > a
@@ -742,6 +747,8 @@ html[xmlns] .clearfix {
   padding:35px;
 }
 
+
+
 .new-product .attach
 {
   width:100%;
@@ -777,4 +784,66 @@ html[xmlns] .clearfix {
 
 
 /* INPOST PAGE */
+
+@media (min-width: 1200px) {
+  .container {
+  width: 1024px;
+  }
+}
+
+.inpost
+{
+  padding:35px;
+}
+
+.inpost-sidebar
+{
+  background: #fff;
+  border-radius: 4px;
+  margin-left: 35px;
+  width: 29%;
+  padding:25px;
+}
+
+.inpost-background
+{
+  background:#fff;
+  border-radius: 4px;
+  padding:25px 45px 45px 45px;
+}
+
+.image-wrapper
+{
+  background-color:#f5f5f5;
+  border-radius:4px;
+  padding:0px;
+}
+
+.inpost-image
+{
+  margin:auto;
+  display:block;
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.inpost-title
+{
+  padding:0px;
+}
+
+.inpost-title h2
+{
+  margin:0px;
+  padding:0px 0px 10px 0px;
+  color:#313131;
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.source
+{
+  font-size:15px;
+  padding-bottom:10px;
+}
 
