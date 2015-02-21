@@ -113,6 +113,8 @@ GEM
       faraday_middleware (>= 0.8, < 0.10)
       hashie (>= 0.4.0)
       multi_json (~> 1.0, >= 1.0.3)
+    intercom-rails (0.2.27)
+      activesupport (> 3.0)
     jbuilder (2.2.6)
       activesupport (>= 3.0.0, < 5)
       multi_json (~> 1.2)
@@ -278,6 +280,7 @@ DEPENDENCIES
   devise
   google-api-client
   instagram
+  intercom-rails
   jbuilder (~> 2.0)
   jquery-rails
   merit
