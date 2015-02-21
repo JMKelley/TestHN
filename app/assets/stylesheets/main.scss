@@ -10,6 +10,7 @@ body {
 	font-stretch: normal;
 	font-style: normal;
 	font-variant: normal;
+  padding-top: 62px;
 }
 
 .container-fluid {
@@ -31,11 +32,6 @@ body {
 .header h1
 {
 	padding-bottom:20px;
-}
-
-.main-content
-{
-	padding-top:20px;
 }
 
 .login-menubar
@@ -97,11 +93,9 @@ p
 }
 
 .main-content {
-	padding-top:23px;
+	padding-top:40px;
 	padding-left: 0px;
 	padding-right: 0px;
-	margin-left: -17px;
-	margin-right: -17px;
 }
 
 .headroom {
@@ -218,7 +212,7 @@ p
 
 
 .navbar-nav > li > a {
-	padding: 23px 20px;
+	padding: 21px 20px;
 	font-weight: 600;
 	font-size: 15px;
 	color: #FFF;
@@ -238,10 +232,10 @@ p
 
 .navbar-brand {
 	float: left;
-	padding: 20px 20px;
+	padding: 18px 20px;
 	font-size: 14px;
 	line-height: 20px;
-	height: 66px;
+	height: 62px;
 	font-weight: 500;
 }
 
@@ -263,7 +257,7 @@ p
 
 .submit-special a
 {
-	padding:13px !important;
+	padding:12px !important;
 }
 
 
@@ -339,6 +333,14 @@ p
 	position:relative;
 	cursor: -webkit-zoom-in; cursor: -moz-zoom-in;
 	z-index:1;
+}
+
+.link-image
+{
+   opacity: 1;
+   transition: opacity .15s ease-in-out;
+   -moz-transition: opacity .15s ease-in-out;
+   -webkit-transition: opacity .15s ease-in-out;
 }
 
 
