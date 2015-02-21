@@ -15,10 +15,12 @@
 <div class="container-fluid main-content">
 
   <div class="grid">
-    <% @links.each do |link| %>
+  <% @links.each do |link| %>
+
     
 
       <div class="item">
+
 
           <div class="hover-info">
 
@@ -40,8 +42,9 @@
           </a>
 
           </div>
-
-          <img class="link-image" src="<%= link.image %>"/>
+          <%= link_to link_path(link) do %>
+            <img class="link-image" src="<%= link.image %>"/>
+          <% end %>
           
       <% if link.is_owner? current_user %>
 
@@ -61,10 +64,9 @@
               </div>
           </div>
       <% end %>
-      
 
-      </div> 
-    <% end %>
+      
+  <% end %>
 
   </div>
 </div>
