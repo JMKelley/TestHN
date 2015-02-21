@@ -45,7 +45,8 @@ class LinksController < ApplicationController
     @link = current_user.links.build({
       title: URI.unescape(params[:title]),
       image: URI.unescape(params[:thumbnail_url]),
-      url: URI.unescape(params[:url])
+      url: URI.unescape(params[:url]),
+      description: URI.unescape(params[:description])
     })
 
     respond_to do |format|
@@ -110,11 +111,11 @@ class LinksController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def link_params
-      params.require(:link).permit(:title, :url, :image)
+      params.require(:link).permit(:title, :url, :image, :description)
     end
 
     def link_creation_params
-      params.permit(:link, :title, :url, :thumbnail_url)
+      params.permit(:link, :title, :url, :thumbnail_url, :description)
     end
 
 
