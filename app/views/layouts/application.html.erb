@@ -14,6 +14,8 @@
   <script src="//cdn.jsdelivr.net/headroomjs/0.7.0/headroom.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/headroom/0.7.0/jQuery.headroom.min.js"></script>
 
+  <script data-cfasync="false" type="text/javascript" src="//filamentapp.s3.amazonaws.com/48e28495c5cb10e99a3a77be965046de.js" async="async"></script>
+
 </head>
 <body>
 
@@ -29,10 +31,10 @@
       </button>
     </div>
 
-      <a class="navbar-brand" href="/">
-        <div class="brand-container">
-        </div>
-      </a>
+      <div class="navbar-brand">
+        <a class="brand-container" href="/">
+        </a>
+      </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -70,7 +72,7 @@
 
       <ul class="nav navbar-nav navbar-right">
         <li>
-          <%= link_to new_link_path, "data-toggle" => "modal", 'data-target' => '.bs-example-modal-sm' do %>
+          <%= link_to new_link_path, "data-toggle" => "modal", 'data-target' => '#sign-up-modal' do %>
             Submit
           <% end %>
         </li>
@@ -79,7 +81,7 @@
         </li>
       </ul>
 
-      <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+      <div class="modal fade bs-example-modal-sm" id="sign-up-modal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-sm">
           <div class="modal-content">
 

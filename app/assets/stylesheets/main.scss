@@ -19,6 +19,15 @@ body {
 	padding-right: 21px;
 }
 
+a
+{
+  text-decoration: none;
+}
+
+a:hover, a:focus {
+text-decoration: none;
+}
+
 .header
 {
 	padding:0px;
@@ -99,6 +108,12 @@ p
 	height:26px;
 	background-image:image-url("logo.png");
   margin:auto;
+  display: block;
+}
+
+.brand-container:hover
+{
+  opacity:0.5;
 }
 
 
@@ -276,11 +291,6 @@ p
 	height: 62px;
 }
 
-.navbar-brand:hover
-{
-  opacity:0.6;
-}
-
 .coming-soon
 {
 	font-size:11px;
@@ -292,7 +302,7 @@ p
 {
 	color:#fff;
 	font-weight: 900;
-	background-color:#22A5F4;
+	background-color:#7ac673;
 	border:none;
 	padding:9px 19px;
 }
@@ -315,7 +325,7 @@ p
 
 .nav-avatar-custom
 {
-	padding:13px 0px !important;
+	padding:11px 0px !important;
 }
 
 .nav-button-custom .btn
@@ -916,6 +926,11 @@ html[xmlns] .clearfix {
   text-overflow: ellipsis; 
 }
 
+.inpost-title p
+{
+  font-weight:500;
+}
+
 .inpost-title .inpost-username
 {
   margin: 0px;
@@ -931,21 +946,22 @@ html[xmlns] .clearfix {
 
 .inpost-actions .hover-score
 {
-  width:100%;
+  width:46%;
   height:50px;
   background:#22A5F4;
   display: inline-block;
   vertical-align: top;
   border-radius: 3px;
   margin-bottom:12px;
+  margin-right:12px;
 }
 
 .inpost-actions .hover-score .hover-actual-score
 {
-  padding: 14px 0px;
+  padding: 11px 0px;
   color: #fff;
   text-align: center;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: bold;
 }
 
@@ -972,7 +988,7 @@ html[xmlns] .clearfix {
 
 .inpost-actions .hover-basket
 {
-  width:100%;
+  width:46%;
   height:50px;
   background:#222222;
   display: inline-block;
