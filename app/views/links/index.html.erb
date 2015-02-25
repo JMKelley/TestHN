@@ -2,7 +2,7 @@
 
 <% if user_signed_in? %>
 <% else %>
-  <div class="container-fluid header">
+  <div class="container header">
     <div class="row">
       <div class="col-md-9 text-left">
         <h1>Over <%= @links.count %> products picked by us - for everyone.</br>Our community is certainly a fashionable bunch.</h1>
@@ -16,6 +16,8 @@
 <% end %>
 
 <div class="container-fluid main-content">
+
+
 
   <div class="grid">
   <% @links.each do |link| %>
@@ -76,7 +78,7 @@
 
 <script>
     $('.grid').gridalicious({
-      width: 290,
+      width: 320,
       animate: true,
       gutter: 20
     });
