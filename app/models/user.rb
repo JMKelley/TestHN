@@ -10,6 +10,14 @@ class User < ActiveRecord::Base
 
   has_many :identities
 
+  def email_required?
+    false
+  end
+
+  def email_changed?
+    false
+  end
+
   def twitter
     identities.where( :provider => "twitter" ).first
   end
