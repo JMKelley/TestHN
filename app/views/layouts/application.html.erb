@@ -53,8 +53,12 @@
 
         <li class="submit-special">
           <%= link_to new_link_path do %>
-            <button type="button" class="btn btn-primary">Submit</button>
+            <button type="button" class="btn btn-primary">+</button>
           <% end %>
+        </li>
+
+        <li class="user-score">
+          <a class="btn btn-primary user-score-button"><%= current_user.points %></a>
         </li>
 
        <li class="dropdown">

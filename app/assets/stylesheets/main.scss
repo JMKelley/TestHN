@@ -310,14 +310,34 @@ p
 	font-weight: 900;
 	background-color:#7ac673;
 	border:none;
-	padding:9px 19px;
+	padding:10px 12px 14px 12px;
+  line-height: 10px;
+  font-size: 26px;
 }
 
 .submit-special a
 {
-	padding:12px !important;
+	padding:18px 0px !important;
 }
 
+.submit-special a:hover
+{
+  background:none !important;
+}
+
+.user-score
+{
+  padding: 18px 0px 18px 12px;
+}
+
+.user-score .user-score-button
+{
+  font-size:15px;
+  padding: 7px 14px;
+  color:#fff !important;
+  background:#3E3E3E;
+  border:none;
+}
 
 .nav-button-custom a
 {
@@ -331,7 +351,12 @@ p
 
 .nav-avatar-custom
 {
-	padding: 18px 18px !important;
+	padding: 18px 18px 18px 12px !important;
+}
+
+.nav-avatar-custom:hover
+{
+  background:none !important;
 }
 
 .nav-button-custom .btn
