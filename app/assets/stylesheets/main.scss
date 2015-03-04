@@ -427,15 +427,12 @@ p
 .link-image
 {
    opacity: 1;
-   transition: opacity .15s ease-in-out;
-   -moz-transition: opacity .15s ease-in-out;
-   -webkit-transition: opacity .15s ease-in-out;
 }
 
 
 .item:hover .link-image
 {
-	opacity:0.2;
+	opacity:0.9;
 }
 
 .hover-info
@@ -443,12 +440,10 @@ p
 	opacity:0;
 	z-index:999;
 	height:50px;
-	margin: auto;
+  width:170px;
 	position: absolute;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
+	top: 15px;
+	right: 15px;
 	text-align: center;
 }
 
@@ -469,12 +464,7 @@ p
 	height:50px;
 	display: inline-block;
 	margin-left:-4px;
-  -webkit-border-top-right-radius: 3px;
-  -webkit-border-bottom-right-radius: 3px;
-  -moz-border-radius-topright: 3px;
-  -moz-border-radius-bottomright: 3px;
-  border-top-right-radius: 3px;
-  border-bottom-right-radius: 3px;
+  border-radius: 3px;
   overflow: hidden;
 }
 
@@ -485,12 +475,8 @@ p
 	background:#22A5F4;
 	display: inline-block;
 	vertical-align: top;
-  -webkit-border-top-left-radius: 3px;
-  -webkit-border-bottom-left-radius: 3px;
-  -moz-border-radius-topleft: 3px;
-  -moz-border-radius-bottomleft: 3px;
-  border-top-left-radius: 3px;
-  border-bottom-left-radius: 3px;
+  border-radius: 3px;
+  margin-right:6px;
 }
 
 .item .hover-score .hover-actual-score
@@ -500,11 +486,12 @@ p
 	text-align: center;
 	font-size: 18px;
 	font-weight: bold;
+  display:none;
 }
 
 .item .hover-score .hover-plus-score
 {
-	display:none;
+	display:block;
 	padding: 2px;
 	color: #fff;
 	font-size: 30px;
@@ -513,12 +500,12 @@ p
 
 .item .hover-score:hover .hover-actual-score
 {
-	display:none;
+	display:block;
 }
 
 .item .hover-score:hover .hover-plus-score
 {
-	display:block;
+	display:none;
 }
 
 .item .hover-basket
@@ -529,6 +516,8 @@ p
 	display: inline-block;
 	margin-left:-4px;
 	vertical-align: top;
+  margin-right:6px;
+  border-radius: 3px;
 }
 
 .item .hover-basket:hover
