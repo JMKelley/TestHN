@@ -7,6 +7,9 @@ Rails.application.routes.draw do
     end
   end
 
+  get "/latest", to: "links#latest"
+
+  get "/popular", to: "links#index"
 
   root to: "links#index"
 

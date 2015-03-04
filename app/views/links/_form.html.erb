@@ -1,5 +1,4 @@
 <%= bootstrap_form_for(@link) do |f| %>
-
   <% if @link.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@link.errors.count, "error") %> prohibited this link from being saved:</h2>
@@ -12,51 +11,45 @@
     </div>
   <% end %>
 
-  <!-- EMBEDLY INTEGRATION -->
+  <div class="submit-web">
+    <input class="submit-web-input" type="url" name="link[image]" id="link_image" placeholder="http://">
+    <img id="submit-web-image" src=""/>
+  </div>
 
-      <input id="url" type="text" name="url" class="form-control insert-url" placeholder="Enter Product URL" autofocus />
+  <div class="submit-web-actions">
+    <div class="field">
+      <input class="form-control" type="text" name="link[title]" id="link_title" placeholder="Enter Title">
+    </div>
 
-      <a class="btn btn-primary attach">Go Fetch!</a>
-   
-      <!-- Placeholder that tells Preview where to put the selector-->
-      <div class="selector-wrapper"></div>
+    <div class="field">
+      <input class="form-control" type="text" name="link[url]" id="link_url" placeholder="Purchase URL">
+    </div>
 
-  <!-- END OF EMBEDLY -->
+    <div class="field">
+      <input class="form-control" type="text" name="link[tags]" id="link_tags" placeholder="#addsometags">
+    </div>
 
-  <div class="actions">
-    <input class="btn btn-primary success share" name="commit" type="submit" value="Submit">
+
+
+    <div class="actions">
+      <input type="submit" name="commit" value="Create Link" class="btn btn-default success">
+    </div>
+
   </div>
 
 
-  <script>
-    // Set up preview.
-    $('#url').preview({
-      key:'5967548e8a8647ffa7e67c42e7ff2ffa',
-      bind:false,
-      error: function(obj){
-        alert('The URL you entered was not processed.');
-      },
-      success : function(obj){
-        $('.attach').remove();
-        $('.success').addClass('success-active');
-      }
-    })
-     
-    // When a use hits Attach, trigger a preview of the link.
-    $('.attach').on('click', function(){$('#url').trigger('preview')});
-     
-    // On submit add hidden inputs to the form.
-    $('form').on('submit', function(){
-      $(this).addInputs($('#url').data('preview'));
-      return true;
-    });
-  </script>
 
   <script>
-    $(".success").click(function() {
-    $('html,body').animate({
-        scrollTop: $(".share").offset().top},
-        'slow');
+    $('#link_image').on('paste', function () {
+      var element = this;
+      setTimeout(function () {
+        var text = $(element).val();
+        var image = $('#submit-web-image')
+        $( image ).attr( "src", text );
+        $( image ).css( "opacity", "1" );
+        $( element ).css( "display", "none" );
+        $('.submit-web-actions' ).css( "display", "block" ); 
+      }, 100);
     });
   </script>
 

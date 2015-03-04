@@ -6,18 +6,12 @@ class LinksController < ApplicationController
   # GET /links
   # GET /links.json
   def index
-
     @links = Link.all.order(:score)
+  end
 
-    @days = [0, 1, 2, 3, 4, 5, 6, 7].collect do |i|
-      date = Time.now - i.days
-      [date, Link.where(created_at: date.beginning_of_day..date.end_of_day).order(:score)]
-    end
-
-    @days = @days.unshift({}).reduce do |memo, day|
-      memo[day[0]] = day[1] if day[1].count > 0
-      memo
-    end
+  def latest
+    @links = Link.all.order(created_at: :desc)
+    render :index
   end
 
   # GET /links/1
@@ -40,16 +34,7 @@ class LinksController < ApplicationController
   # POST /links.json
   def create
 
-    params = link_creation_params
-
-    @link = current_user.links.build({
-      title: URI.unescape(params[:title]),
-      image: URI.unescape(params[:thumbnail_url]),
-      url: URI.unescape(params[:url]),
-      description: URI.unescape(params[:description]),
-      provider_name: URI.unescape(params[:provider_name]),
-      provider_url: URI.unescape(params[:provider_url])
-    })
+    @link = current_user.links.build(link_params)
 
     respond_to do |format|
       if @link.save
@@ -115,10 +100,5 @@ class LinksController < ApplicationController
     def link_params
       params.require(:link).permit(:title, :url, :image, :description, :provider_name, :provider_url)
     end
-
-    def link_creation_params
-      params.permit(:link, :title, :url, :thumbnail_url, :description, :provider_name, :provider_url)
-    end
-
 
 end
