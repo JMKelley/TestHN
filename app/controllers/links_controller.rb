@@ -77,13 +77,17 @@ class LinksController < ApplicationController
   def upvote
     @link = Link.find(params[:id])
     @link.upvote_by current_user
-    redirect_to :back
+
+    if request.xhr?
+      render json: { count: @link.get_upvotes.size, id: params[:id] }
+    else
+      redirect_to @link
+    end
   end
 
   def downvote
     @link = Link.find(params[:id])
-    @link.downvote_by current_user unless @link.is_owner? current_user
-    redirect_to :back
+    @link.downvote_from current_user
   end
 
   private

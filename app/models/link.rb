@@ -3,14 +3,6 @@ class Link < ActiveRecord::Base
 	belongs_to :user
 	before_save :update_score
 
-  def to_param
-    "#{id}-#{slug}"
-  end
-
-  def slug
-    title.downcase.gsub(/\ +/, '-')
-  end
-
   def score
     ::Score.new(get_likes.count, get_dislikes.count, self.created_at || Time.now).value
   end

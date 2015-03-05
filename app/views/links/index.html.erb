@@ -27,12 +27,33 @@
 
           <div class="hover-info">
 
-          <%= link_to like_link_path(link), method: :put do %>
-            <div class="hover-score">
-              <p class="hover-actual-score"><%= link.get_upvotes.size %></p>
-              <p class="hover-plus-score">+</p>
+        <% if current_user.liked? link %>
+
+          <%= link_to like_link_path(link), class: "vote", method: :put, remote: true do %>
+            <div class="hover-score-liked">
+
+              <p class="hover-actual-score" data-id="<%= link[:id] %>">
+                <%= link.get_upvotes.size %>
+              </p>
+
+              <p class="hover-plus-score"><i class="fa fa-heart fa-lg"></i></p>
             </div>
           <% end %>
+
+        <% else %>
+
+          <%= link_to like_link_path(link), class: "vote", method: :put, remote: true do %>
+            <div class="hover-score">
+
+              <p class="hover-actual-score" data-id="<%= link[:id] %>">
+                <%= link.get_upvotes.size %>
+              </p>
+
+              <p class="hover-plus-score"><i class="fa fa-heart fa-lg"></i></p>
+            </div>
+          <% end %>
+          
+        <% end %>
 
           <a target='_blank' href="<%= link.url %>">
             <div class="hover-basket">
@@ -48,25 +69,6 @@
           <%= link_to link_path(link) do %>
             <img class="link-image" src="<%= link.image %>"/>
           <% end %>
-          
-      <% if link.is_owner? current_user %>
-
-      <% else %>
-          <div class="btn-group">
-                <a class="btn btn-default btn-sm" href="<%= link.url %>">Visit Link</a>
-                <%= link_to like_link_path(link), method: :put, class: "btn btn-default btn-sm" do %>
-                  <span class="glyphicon glyphicon-chevron-up"></span>
-                  Upvote
-                  <%= link.get_upvotes.size %>
-                <% end %>
-                <%= link_to dislike_link_path(link), method: :put, class: "btn btn-default btn-sm" do %>
-                  <span class="glyphicon glyphicon-chevron-down">
-                  Downvote
-                  <%= link.get_downvotes.size %>
-                <% end %>
-              </div>
-          </div>
-      <% end %>
 
       
   <% end %>
