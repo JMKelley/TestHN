@@ -76,7 +76,7 @@ class LinksController < ApplicationController
 
   def upvote
     @link = Link.find(params[:id])
-    @link.upvote_by current_user unless @link.is_owner? current_user
+    @link.upvote_by current_user
     redirect_to :back
   end
 
